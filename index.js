@@ -92,6 +92,9 @@ and should return a string in the format `{name} gave the restaurant a {rating},
  * it will return `Daniela gave the restaurant a 5 star review and their feedback was: Beautiful atmosphere and wonderful vegan options!`
 */
 function getReviewByIndex(reviews, index) {
+    if (Number(index) >= reviews.length) {
+        return 'Not a valid index'
+    }
     return `${reviews[index].name} gave the restaurant a ${reviews[index].rating} star review and their feedback was: "${reviews[index].feedback}"`;
 }
 console.log(getReviewByIndex(reviews, 0));
@@ -197,3 +200,4 @@ console.log(car1.odometer);
 car1.drive(10);
 console.log(car1.odometer);
 console.log(getReviewByRating(reviews, 1));
+console.log(getReviewByIndex(reviews, 8));
