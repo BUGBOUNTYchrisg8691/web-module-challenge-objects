@@ -8,11 +8,11 @@ const breakfastBurrito = { name: "Breakfast Burrito", price: 16, category: "Brea
 
 function createMenuItem(name, cost, category) {
 
-    // const obj = {
-    //     name: name,
-    //     price: cost,
-    //     category: category
-    // };
+    const obj = {
+        name: name,
+        price: cost,
+        category: category
+    };
 
     return obj;
 };
@@ -170,15 +170,15 @@ The returned object should have the following characteristics:
 function carMaker(odo) {
     const car = {
         odometer: odo,
-        drive: function(dist) {
+        drive: (dist) => {
             this.odometer += dist;
-            console.log(this.odometer);
+            return this.odometer;
         }
     }
     return car;
 }
 
 const car1 = carMaker(10000);
-// car1.drive(10);
-// car1.drive(33);
-// car1.drive(238);
+car1.drive(10);
+car1.drive(33);
+car1.drive(238);
