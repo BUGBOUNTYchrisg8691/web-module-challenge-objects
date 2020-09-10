@@ -189,7 +189,7 @@ function carMaker(odo) {
         odometer: odo,
         drive: function(dist) {
             this.odometer += dist;
-            console.log(this.odometer);
+            return this.odometer;
         }
     }
     return car;
