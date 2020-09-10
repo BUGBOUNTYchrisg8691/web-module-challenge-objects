@@ -7,12 +7,19 @@ const breakfastBurrito = { name: "Breakfast Burrito", price: 16, category: "Brea
 /* Task 1a: write a function to return more menu items with the same format as the items above. */
 
 function createMenuItem(name, cost, category) {
-    const obj = {
-        name: name,
-        price: cost,
-        category: category
-    };
-    
+    const obj = {};
+    const attrs = ['name', 'price', 'category'];
+    attrs.forEach(a => {
+        obj.
+        `${attrs[1]}` = name
+    })
+
+    // const obj = {
+    //     name: name,
+    //     price: cost,
+    //     category: category
+    // };
+
     return obj;
 };
 
