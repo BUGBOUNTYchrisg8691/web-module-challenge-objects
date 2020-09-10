@@ -131,6 +131,9 @@ function getReviewByRating(arr, rating) {
             newArr.push(a);
         }
     });
+    if (newArr.length === 0) {
+        newArr.push('There are new reviews that match your query.')
+    }
     return newArr;
 }
 
@@ -193,3 +196,4 @@ const car1 = carMaker(10000);
 console.log(car1.odometer);
 car1.drive(10);
 console.log(car1.odometer);
+console.log(getReviewByRating(reviews, 1));
