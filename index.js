@@ -178,7 +178,18 @@ The returned object should have the following characteristics:
 */
 
 
-function carMaker( /* code here */ ) {
-    /* code here */
-
+function carMaker(odo) {
+    const car = {
+        odometer: odo,
+        drive: function(dist) {
+            this.odometer += dist;
+            console.log(this.odometer);
+        }
+    }
+    return car;
 }
+
+const car1 = carMaker(10000);
+console.log(car1.odometer);
+car1.drive(10);
+console.log(car1.odometer);
