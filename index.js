@@ -127,7 +127,7 @@ console.log(getLastReview(reviews));
 function getReviewByRating(arr, rating) {
     const newArr = [];
     arr.forEach(a => {
-        if (Math.floor(a.rating) == 4) {
+        if (Math.floor(a.rating) == rating) {
             newArr.push(a);
         }
     });
