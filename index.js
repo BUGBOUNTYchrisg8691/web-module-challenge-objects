@@ -198,6 +198,6 @@ function carMaker(odo) {
 const car1 = carMaker(10000);
 console.log(car1.odometer);
 car1.drive(10);
-console.log(car1.odometer);
-console.log(getReviewByRating(reviews, 1));
-console.log(getReviewByIndex(reviews, 8));
+car1.drive(33);
+car1.drive(238);
+console.log(car1);
