@@ -182,3 +182,4 @@ const car1 = carMaker(10000);
 car1.drive(10);
 car1.drive(33);
 car1.drive(238);
+console.log(car1);
