@@ -6,16 +6,24 @@ const breakfastBurrito = { name: "Breakfast Burrito", price: 16, category: "Brea
 
 /* Task 1a: write a function to return more menu items with the same format as the items above. */
 
-function createMenuItem(name, cost, category) {
+// function createMenuItem(name, cost, category) {
 
-    const obj = {
+//     const obj = {
+//         name: name,
+//         price: cost,
+//         category: category
+//     };
+
+//     return obj;
+// };
+
+function createMenuItem(name, cost, category) {
+    return {
         name: name,
         price: cost,
         category: category
-    };
-
-    return obj;
-};
+    }
+}
 
 console.log(createMenuItem("Chicken Nuggets", 7, "Lunch"))
 
@@ -25,9 +33,9 @@ const waffles = createMenuItem("Belgian Waffles", 14, "Breakfast");
 const shake = createMenuItem("Chocolate Milkshake", 8, "Drinks");
 const chicSand = createMenuItem("Chicken Sandwich", 12, "Lunch");
 
-console.log(waffles);
-console.log(shake);
-console.log(chicSand);
+// console.log(waffles);
+// console.log(shake);
+// console.log(chicSand);
 
 /* Task 2: You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. Add a method to your burger object that automatically calculates price given a string as a parameter. 
 
@@ -49,6 +57,9 @@ burger.discount = function(patron) {
     }
     return result;
 }
+
+
+// console.log(burger.discount('teacher'))
 
 
 ///////////////Reviews (MVP)///////////////////
@@ -92,11 +103,13 @@ and should return a string in the format `{name} gave the restaurant a {rating},
  * it will return `Daniela gave the restaurant a 5 star review and their feedback was: Beautiful atmosphere and wonderful vegan options!`
 */
 function getReviewByIndex(reviews, index) {
-    if (Number(index) >= reviews.length) {
+    if (!(Number(index) <= reviews.length - 1)) {
         return 'Not a valid index'
     }
     return `${reviews[index].name} gave the restaurant a ${reviews[index].rating} star review and their feedback was: "${reviews[index].feedback}"`;
 }
+
+// console.log(getReviewByIndex(reviews, 8));
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
 
@@ -178,8 +191,8 @@ function carMaker(odo) {
     return car;
 }
 
-const car1 = carMaker(10000);
-car1.drive(10);
-car1.drive(33);
-car1.drive(238);
-console.log(car1);
+// const car1 = carMaker(10000);
+// car1.drive(10);
+// car1.drive(33);
+// car1.drive(238);
+// console.log(car1);
